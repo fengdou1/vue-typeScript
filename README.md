@@ -1,4 +1,4 @@
-# vue-ts
+# vue-ts1
 
 ## Project setup
 ```
