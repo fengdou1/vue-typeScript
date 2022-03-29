@@ -3,6 +3,7 @@ export interface lines {
   id: number;
   date: string;
   flag: boolean;
+  note: string;
 }
 
  //泛型
