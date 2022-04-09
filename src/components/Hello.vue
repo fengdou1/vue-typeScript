@@ -1,6 +1,6 @@
 <template>
     <div>
-        {{msg}} -- {{name}}
+        {{msg}} -- {{sname}}
         <p>
             <input type="text" placeholder="请输入" @keyup.enter="addFeature">
         </p>

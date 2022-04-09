@@ -3,7 +3,7 @@
         <header>
             <section> 
                 <label for="title">ToDoList</label>
-                <input type="text" id="title" name="title" placeholder="添加ToDo" required="required" autocomplete="off" @keyup.enter="add"> 
+                <input type="text" id="title" name="title" placeholder="添加ToDo" required="required" autocomplete="off" @keyup.enter="add($event.target.value)"> 
             </section>
         </header>
   </div>
@@ -11,8 +11,7 @@
 
 <script lang="ts">
 import { Component, Vue, Emit } from 'vue-property-decorator';
- 
-
+  
 @Component({
   components: {
     
@@ -20,9 +19,9 @@ import { Component, Vue, Emit } from 'vue-property-decorator';
 })
 export default class List extends Vue {
  
-  add(event: any):void{
+  add(prame: string):void{
     // return (event.target.value) 
-    this.$store.dispatch("updateAction", event.target.value);
+    this.$store.dispatch("updateAction", prame);
   }
    
     
